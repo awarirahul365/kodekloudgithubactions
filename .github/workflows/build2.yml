@@ -21,4 +21,4 @@ jobs:
 
             - name: Run Repo
               run: |
-                ./testscript.sh
+                ./testscript2.sh
