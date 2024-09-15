@@ -1,7 +1,6 @@
 name: matrix stratergy
 
 on:
-    push:
     workflow_dispatch:
 
 
