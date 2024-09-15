@@ -16,7 +16,7 @@ jobs:
               run: |
                 chmod +x ./testscript2.sh
                 ./testscript2.sh
-                echo "::set-output name=status::success"
+                echo "{status}={success}" >> $GITHUB_OUTPUT
 
     asciijob2:
         runs-on: ubuntu-latest
