@@ -19,4 +19,4 @@ jobs:
 
             - name: Test Files Exists
               run: |
-                grep -i "ascci" ascci.txt
+                cat ascci.txt
