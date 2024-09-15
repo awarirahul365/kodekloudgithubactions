@@ -11,7 +11,7 @@ jobs:
 
             - name: Run Repo
               run: |
-                chmod +x testscript.sh
+                chmod +x ./testscript.sh
                 ./testscript.sh
 
     asciijob2:
@@ -22,5 +22,5 @@ jobs:
 
             - name: Run Repo
               run: |
-                chmod +x testscript2.sh
+                chmod +x ./testscript2.sh
                 ./testscript2.sh
