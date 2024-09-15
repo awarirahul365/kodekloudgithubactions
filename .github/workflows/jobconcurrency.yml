@@ -1,0 +1,17 @@
+name: matrix stratergy
+
+on:
+    push:
+    workflow_dispatch:
+
+
+jobs:
+    run_image_job:
+        strategy:
+            matrix:
+                os: [ubuntu-latest,windows-latest]
+                images: [nginx,alpine]
+        runs-on: ${{matrix.os}}
+        steps:
+            - name: Run Docker
+              run: docker run ${{matrix.images}}
