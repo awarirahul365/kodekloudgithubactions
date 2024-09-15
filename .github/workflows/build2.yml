@@ -13,6 +13,7 @@ jobs:
               run: |
                 chmod +x ./testscript2.sh
                 ./testscript2.sh
+                ls
 
     asciijob2:
         runs-on: ubuntu-latest
@@ -23,5 +24,6 @@ jobs:
 
             - name: Run Repo
               run: |
+                ls
                 chmod +x ./testscript.sh
                 ./testscript.sh
