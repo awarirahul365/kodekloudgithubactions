@@ -12,10 +12,11 @@ jobs:
             - name: Run Repo
               run: |
                 chmod +x ./testscript.sh
-                ./testscript.sh
+                ./testscript2.sh
 
     asciijob2:
         runs-on: ubuntu-latest
+        needs: [ascii_jobs]
         steps:
             - name: Checkout Repo
               uses: actions/checkout@v4
@@ -23,4 +24,4 @@ jobs:
             - name: Run Repo
               run: |
                 chmod +x ./testscript2.sh
-                ./testscript2.sh
+                ./testscript.sh
