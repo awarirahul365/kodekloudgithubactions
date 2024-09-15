@@ -8,6 +8,8 @@ on:
 jobs:
     run_image_job:
         strategy:
+            fail-fast: false
+            max-parallel: 2
             matrix:
                 os: [ubuntu-latest,windows-latest]
                 images: [nginx,alpine]
