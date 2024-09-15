@@ -8,7 +8,7 @@ jobs:
         steps:
             - name: Checkout Repo
               uses: actions/checkout@v4
-              
+
             - name: Install Cowsay
               run: |
                 sudo apt-get install cowsay -y
@@ -18,4 +18,5 @@ jobs:
                 cowsay -f dragon "Hello run away" >> ascci.txt
 
             - name: Test Files Exists
-              run: grep -i "ascci" ascci.txt
+              run: |
+                grep -i "ascci" ascci.txt
