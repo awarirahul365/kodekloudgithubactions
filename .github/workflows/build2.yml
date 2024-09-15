@@ -5,15 +5,18 @@ on: push
 jobs:
     ascii_jobs:
         runs-on: ubuntu-latest
+        outputs:
+            script_status: ${{steps.run_script.outputs.status}}
         steps:
             - name: Checkout Repo
               uses: actions/checkout@v4
 
             - name: Run Repo
+              id: run_script
               run: |
                 chmod +x ./testscript2.sh
                 ./testscript2.sh
-                ls
+                echo "::set-output name=status::success"
 
     asciijob2:
         runs-on: ubuntu-latest
@@ -21,6 +24,4 @@ jobs:
         steps:
             - name: Run Repo
               run: |
-                ls
-                chmod +x ./testscript.sh
-                ./testscript.sh
+                echo "Previous job status ${{steps.ascii_jobs.outputs.status}}"
