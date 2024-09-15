@@ -1,0 +1,14 @@
+name: ascii workflow
+
+on: push
+
+jobs:
+    ascii_jobs:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
+
+            - name: Run Repo
+              run: |
+                ./testscript.sh
