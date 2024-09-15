@@ -24,4 +24,4 @@ jobs:
         steps:
             - name: Run Repo
               run: |
-                echo "Previous job status ${{steps.ascii_jobs.outputs.status}}"
+                echo "Previous job status ${{needs.ascii_jobs.outputs.status}}"
